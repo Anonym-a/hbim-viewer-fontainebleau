@@ -53,7 +53,7 @@ fragmentIfcLoader.settings.webIfc.COORDINATE_TO_ORIGIN = false;
 //1.2 Load IFC as Fragments :
 
 const file = await fetch(
-  "https://raw.githubusercontent.com/rvouilloz/hbim-viewer-fontainebleau/resources/models/ifc/fontainebleau.ifc"
+  "https://cimsprojects.ca:9000/assets/epfl/fontainebleau.ifc"
 );
 const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
@@ -344,12 +344,12 @@ const renderer = world.renderer.three;
 //2.1 Set up
 
 const tilesRenderer = new TilesRenderer(
-  "https://raw.githubusercontent.com/rvouilloz/hbim-viewer-fontainebleau/resources/models/tiled-photomesh/tileset.json"
+  "https://cimsprojects.ca:9000/assets/epfl/tiled-photomesh/tileset.json"
 );
 
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath(
-  "https://raw.githubusercontent.com/rvouilloz/hbim-viewer-fontainebleau/resources/draco/gltf/"
+  "https://cimsprojects.ca:9000/assets/epfl/draco/gltf/"
 );
 
 const loader = new GLTFLoader(tilesRenderer.manager);
